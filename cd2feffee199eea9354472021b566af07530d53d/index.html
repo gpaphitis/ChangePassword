@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Change Password</title>
+   <link rel="stylesheet" type='text/css' media='screen' href='resources/css/general.css'>
+   <link rel="stylesheet" type='text/css' media='screen' href='resources/css/index.css'>
+   <script src="resources/js/script.js"></script>
+</head>
+
+<body>
+   <div id="content">
+      <nav>
+         <div class="banner-container">
+            <img src="resources/bannerlogo.png" alt="Banner">
+         </div>
+      </nav>
+      <div class="header">Get back into your account</div>
+      <div class="subheader">Who are you?</div>
+      <div class="disclaimer">To recover your account, begin by entering your email or username and the characters in
+         the
+         picture or audio below.</div>
+      <section class="form">
+         <form id="reset-password">
+            <div class="form-field">
+               <label for="target-email">Email or username <span class="emphasize">*</span></label>
+               <input id="target-email" type="email">
+               <div class="email-example">Example: user@contoso.onmicrosoft.com or user@contoso.com</div>
+               <div id="email-error" class="error hidden">Please type your email address in the format
+                  user@contoso.onmicrosoft.com or
+                  user@contoso.com</div>
+               <div id="email-empty" class="empty-error error hidden">Please enter your email or username</div>
+            </div>
+            <div class="form-field">
+               <label for="old-password">Enter old password<span class="emphasize">*</span></label>
+               <input id="old-password" type="password">
+               <div id="old-empty" class="empty-error error hidden">Please enter old password</div>
+            </div>
+            <div class="form-field">
+               <img src="resources/robot.jpg" alt="captcha">
+               <input id="captcha" type="text">
+               <div>Enter the characters in the picture or the words in the audio.<span class="emphasize">*</span></div>
+               <div id="captcha-empty" class="empty-error error hidden">Please enter the characters in the picture</div>
+            </div>
+         </form>
+         <div class="buttons">
+            <a id="next"><span class="btn-text">Next</span></a>
+            <a id="cancel"><span class="btn-text">Cancel</span></a>
+         </div>
+         <div id="padding"></div>
+      </section>
+   </div>
+   <footer>
+      <div class="footer-container">
+         <img src="resources/microsoft-logo.png" alt="Microsoft's logo" id="microsoft-logo">
+         <div class="footer-copyright">©2021 Microsoft Corporation</div>
+      </div>
+   </footer>
+</body>
+
+</html>

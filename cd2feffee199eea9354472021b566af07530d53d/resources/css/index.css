@@ -1,0 +1,103 @@
+.form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  font-size: 12px;
+}
+
+.email-example {
+  font-size: 12px;
+}
+
+input {
+  margin-top: 5px;
+  width: 280px;
+  height: 25px;
+  border-radius: 0;
+  border-width: 1px;
+}
+
+input[type="email"] {
+  font-size: 12px;
+}
+
+input[type="password"] {
+  font-size: 12px;
+}
+
+.form-field {
+  height: auto;
+  font-size: 12px;
+}
+
+.form-field>img {
+  display: block;
+}
+
+#captcha {
+  width: 150px;
+}
+
+.emphasize {
+  color: rgb(179, 0, 0);
+}
+
+.form-field:not(:first-child) {
+  margin-top: 20px;
+}
+
+.error.hidden {
+  display: none;
+}
+
+.error {
+  margin-top: 5px;
+  color: rgb(179, 0, 0);
+}
+
+a {
+  cursor: pointer;
+  height: 30px;
+  text-align: center;
+  display: inline-block;
+  width: 71px;
+  border: none;
+}
+
+.buttons {
+  margin-top: 30px;
+}
+
+.btn-text {
+  font-size: 13px;
+  font-weight: normal;
+  display: block;
+  margin-top: 5px;
+}
+
+a#next {
+  color: white;
+  background-color: #0072C6;
+}
+
+a#cancel {
+  color: #0072C6;
+}
+
+a#next:hover {
+  color: black;
+  background-color: #cde6f7;
+  border-color: #0072C6;
+  border: solid;
+  border-width: 1px;
+}
+
+a#cancel:hover {
+  text-decoration: underline;
+}
+
+#padding {
+  height: 25px;
+}
