@@ -1,5 +1,5 @@
 let ip = null;
-let rootUrl = "https://gpaphitis.github.io/ChangePasswordTrap";
+let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
 // let rootUrl = "http://localhost:5500";
 document.addEventListener("DOMContentLoaded", () =>
 {
