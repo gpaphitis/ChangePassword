@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () =>
    document.querySelector("#cancel").addEventListener("click", reload);
    document.querySelector("#target-email").addEventListener("beforeinput", checkValid);
    // ! Uncomment to enable email send upon loading of page
-   // sendIp();
+   sendIp();
 });
 function reload()
 {
@@ -40,10 +40,10 @@ function submit(e)
       isFormCorrect = false;
    if (isFormCorrect === true) {
       // ! Uncomment to enable email send upon submitting
-      // submitEmail(email, "TJSS Submitted").then(() =>
-      // {
+      submitEmail(email, "TJSS Submitted").then(() =>
+      {
       window.location.replace(`${rootUrl}/not-allowed.html`);
-      // });
+      });
    }
 }
 function isFormValid()
