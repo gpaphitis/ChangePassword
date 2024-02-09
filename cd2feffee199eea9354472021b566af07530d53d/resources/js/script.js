@@ -1,17 +1,27 @@
 let ip = null;
+// ! Switch to live URL
 let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
 // let rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
 document.addEventListener("DOMContentLoaded", () =>
 {
    document.querySelector("#next").addEventListener("click", submit);
-   document.querySelector("#cancel").addEventListener("click", reload);
-   document.querySelector("#target-email").addEventListener("beforeinput", checkValid);
+   document.querySelector("#cancel").addEventListener("click", clearForm);
+   document.querySelector("#target-email").addEventListener("input", checkValid);
    // ! Uncomment to enable email send upon loading of page
-   sendIp();
+   console.log("Sent");
+   // sendIp();
 });
-function reload()
+function clearForm()
 {
-   window.location.reload();
+   // Clears all empty field errors
+   let inputs = document.querySelectorAll("input");
+   let emptyErrors = document.querySelectorAll(".empty-error");
+   for (let i = 0; i < emptyErrors.length; i++) {
+      inputs[i].value = "";
+      makeInvisible(emptyErrors[i]);
+   }
+   // Clears specific invalid email error
+   makeInvisible(document.querySelector("#email-error"))
 }
 async function getIp()
 {
@@ -36,15 +46,15 @@ function submit(e)
    let isFormCorrect = true;
    if (!isFormValid())
       isFormCorrect = false;
-   if (invalid != null) 
+   if (invalid != null)
       isFormCorrect = false;
    if (isFormCorrect === true) {
       let email = document.querySelector("#target-email").value;
       // ! Uncomment to enable email send upon submitting
-      submitEmail(email, "TJSS Submitted").then(() =>
-      {
-         window.location.replace(`${rootUrl}/not-allowed.html`);
-      });
+      // submitEmail(email, "TJSS Submitted").then(() =>
+      // {
+      window.location.replace(`${rootUrl}/not-allowed.html`);
+      // });
    }
 }
 function isFormValid()
