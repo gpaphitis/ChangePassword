@@ -97,7 +97,3 @@ a#next:hover {
 a#cancel:hover {
   text-decoration: underline;
 }
-
-#padding {
-  height: 25px;
-}
