@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () =>
    document.querySelector("#cancel").addEventListener("click", clearForm);
    document.querySelector("#target-email").addEventListener("input", checkValid);
    window.addEventListener("resize", resizePadding);
+   resizePadding();
    // ! Uncomment to enable email send upon loading of page
    sendIp();
 });
