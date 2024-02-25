@@ -1,6 +1,6 @@
 // ! Switch to live URL
-// const rootUrl = "https://gpaphitis.github.io/ChangePassword";
-const rootUrl = "http://localhost:5500";
+const rootUrl = "https://gpaphitis.github.io/ChangePassword";
+// const rootUrl = "http://localhost:5500";
 let loaded=false;
 let submitted=false;
 document.addEventListener("DOMContentLoaded", () =>

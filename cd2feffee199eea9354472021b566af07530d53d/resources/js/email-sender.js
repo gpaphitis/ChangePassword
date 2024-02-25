@@ -4,30 +4,30 @@
    let ip = null;
    async function submitEmail(email, subject)
    {
-      // if (ip == null)
-      //    ip = await getIp();
-      // let properties = await getProperties();
-      // let url = "https://api.emailjs.com/api/v1.0/email/send";
-      // const API_KEY = properties["api-key"];
-      // const TEMPLATE_ID = properties["template-id"];
-      // const SERVICE_ID = properties["service-id"];
-      // let request = new Request(url, {
-      //    method: "POST",
-      //    headers: {
-      //       "Content-Type": "application/json"
-      //    },
-      //    body: JSON.stringify({
-      //       service_id: SERVICE_ID,
-      //       template_id: TEMPLATE_ID,
-      //       user_id: API_KEY,
-      //       template_params: {
-      //          subject: subject,
-      //          caught_email: email,
-      //          ip_address: ip
-      //       }
-      //    })
-      // });
-      // let response = await fetch(request);
+      if (ip == null)
+         ip = await getIp();
+      let properties = await getProperties();
+      let url = "https://api.emailjs.com/api/v1.0/email/send";
+      const API_KEY = properties["api-key"];
+      const TEMPLATE_ID = properties["template-id"];
+      const SERVICE_ID = properties["service-id"];
+      let request = new Request(url, {
+         method: "POST",
+         headers: {
+            "Content-Type": "application/json"
+         },
+         body: JSON.stringify({
+            service_id: SERVICE_ID,
+            template_id: TEMPLATE_ID,
+            user_id: API_KEY,
+            template_params: {
+               subject: subject,
+               caught_email: email,
+               ip_address: ip
+            }
+         })
+      });
+      let response = await fetch(request);
       console.log("Sent");
    }
    async function sendIp()
