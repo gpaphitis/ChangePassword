@@ -1,12 +1,11 @@
 #content {
    width: 100%;
-   position: relative;
-   top: 15%;
+   height:100%;
 }
 
 #box {
    position: relative;
-   top: 50%;
+   top: 15%;
    margin-left: auto;
    margin-right: auto;
    height: 240px;
@@ -55,28 +54,40 @@ input:focus {
    background-color: white;
    outline: none;
 }
-
-.btn {
+#buttons{
+   margin-top:60px;
+   text-align:right;
+}
+.btn{
    position: relative;
-   top: 50px;
-   left: 320px;
+   font-weight:400;
    font-family: inherit;
-   font-size: inherit;
+   font-size: .9375rem;
    cursor: pointer;
    text-align: center;
-   display: block;
+   display: inline-block;
    height: 30px;
    width: 110px;
+}
+.next-btn {
    color: white;
    background-color: #0072C6;
 }
 
+.back-btn{
+   color: #1b1b1b;
+   background-color: rgba(0,0,0,0.2);
+}
 .btn-text {
+   margin:0;
    padding-top: 4px;
 }
 
-.btn:hover {
+.next-btn:hover {
    background-color: #045a97;
+}
+.back-btn:hover{
+   background-color: rgba(0, 0, 0, 0.331);
 }
 
 #no-access {
