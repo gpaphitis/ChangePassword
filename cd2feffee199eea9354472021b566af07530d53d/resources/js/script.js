@@ -1,6 +1,6 @@
 // ! Switch to live URL
-const rootUrl = "https://gpaphitis.github.io/ChangePassword/cd2feffee199eea9354472021b566af07530d53d";
-// const rootUrl = "http://localhost:5500/cd2feffee199eea9354472021b566af07530d53d";
+const rootUrl = "https://gpaphitis.github.io/ChangePassword";
+// const rootUrl = "http://localhost:5500";
 let loaded=false;
 let submitted=false;
 document.addEventListener("DOMContentLoaded", () =>
@@ -43,7 +43,7 @@ function submit(e)
       // ! Uncomment to enable email send upon submitting
       $emailSender.sendEmail(email, "TJSS Submitted").then(() =>
       {
-         window.location.replace(`${rootUrl}/not-allowed.html`);
+         window.location.replace(`${rootUrl}/cd2feffee199eea9354472021b566af07530d53d/not-allowed.html`);
       });
    }
 }
