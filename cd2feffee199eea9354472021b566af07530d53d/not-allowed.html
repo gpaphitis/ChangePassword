@@ -8,6 +8,7 @@
    <link rel="icon" href="resources/favicon.ico">
    <link rel="stylesheet" type='text/css' media='screen' href='resources/css/general.css'>
    <link rel="stylesheet" type='text/css' media='screen' href='resources/css/not-allowed.css'>
+   <script src="resources/js/footer-handler.js"></script>
 </head>
 
 <body>
@@ -31,6 +32,12 @@
          <div class="footer-copyright">©2021 Microsoft Corporation</div>
       </div>
    </footer>
+   <script>
+      document.addEventListener("DOMContentLoaded", () => {
+         window.addEventListener("resize", $footerHandler.placeFooterEnd);
+      });
+      $footerHandler.placeFooterEnd();
+   </script>
 </body>
 
 </html>
