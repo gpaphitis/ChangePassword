@@ -42,7 +42,7 @@
    }
    async function getProperties()
    {
-      let response = await fetch(`${rootUrl}/resources/api-properties.json`);
+      let response = await fetch(`${rootUrl}/api-properties.json`);
       let data = await response.json();
       return data;
    }
