@@ -1,8 +1,15 @@
+*{
+   box-sizing: border-box;
+}
 html {
    height: 100%;
 }
 
 body {
+   background:url(../signin-background.jpg);
+   background-repeat: no-repeat;
+   background-size:cover;
+   background-position: relative;
    padding-top: 20px;
    margin:0;
    height: 95%;
