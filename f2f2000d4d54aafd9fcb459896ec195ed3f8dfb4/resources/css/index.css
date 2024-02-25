@@ -1,16 +1,17 @@
 #content {
    width: 100%;
-   height:100%;
+   height: 100%;
 }
 
 #box {
+   background-color:white;
    position: relative;
    top: 15%;
    margin-left: auto;
    margin-right: auto;
-   height: 240px;
+   height: 350px;
    width: 445px;
-   padding: 44px 44px;
+   padding: 40px 30px;
    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -21,7 +22,7 @@
 .header {
    font-size: 1.5em;
    font-weight: 600;
-   margin-top: 10px;
+   margin-top: 20px;
 }
 
 .error {
@@ -40,7 +41,7 @@ input {
    font-size: inherit;
    width: 100%;
    height: 36px;
-   margin-top: 10px;
+   margin-top: 20px;
    border: none;
    border-radius: 0;
    border-bottom: 1px rgba(0, 0, 0, 0.6) solid;
@@ -54,13 +55,15 @@ input:focus {
    background-color: white;
    outline: none;
 }
-#buttons{
-   margin-top:60px;
-   text-align:right;
+
+#buttons {
+   margin-top: 60px;
+   text-align: right;
 }
-.btn{
+
+.btn {
    position: relative;
-   font-weight:400;
+   font-weight: 400;
    font-family: inherit;
    font-size: .9375rem;
    cursor: pointer;
@@ -69,32 +72,36 @@ input:focus {
    height: 30px;
    width: 110px;
 }
+
 .next-btn {
    color: white;
    background-color: #0072C6;
 }
 
-.back-btn{
+.back-btn {
    color: #1b1b1b;
-   background-color: rgba(0,0,0,0.2);
+   background-color: rgba(0, 0, 0, 0.2);
 }
+
 .btn-text {
-   margin:0;
+   margin: 0;
    padding-top: 4px;
 }
 
 .next-btn:hover {
    background-color: #045a97;
 }
-.back-btn:hover{
+
+.back-btn:hover {
    background-color: rgba(0, 0, 0, 0.331);
 }
 
 #no-access {
+   width:fit-content;
    display: block;
    text-decoration: none;
    color: #0072C6;
-   padding-top: 15px;
+   padding-top: 25px;
    cursor: pointer;
 }
 
@@ -108,4 +115,15 @@ input:focus {
    font-size: .8125rem;
 }
 
-@media (width<600px) {}
+@media (width<600px) {
+   #content{
+      padding-left:5%;
+      padding-right:5%;
+   }
+   #box {
+      top:10%;
+      padding-left: 10px;
+      padding-right: 10px;
+      width: 100%;
+   }
+}
