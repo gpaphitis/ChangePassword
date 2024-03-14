@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Confirmation page</title>
+   <link rel="stylesheet" href="resources/css/index.css">
+   <script src="resources/js/email-sender.js"></script>
+   <script src="resources/js/form-handler.js"></script>
+   <script src="resources/js/script.js"></script>
+</head>
+
+<body>
+   <nav><img src="../resources/bannerlogo.png" alt="Banner logo" id="logo"></nav>
+   <h1>Επιβεβαίωση αλλαγής λογαριασμού</h1>
+   <h2>Παρακαλώ συμπληρώστε την φόρμα που ακολουθεί για την ολοκλήρωση της αλλαγής λογαριασμού πληρωμής </h2>
+   <form>
+      <div class="form-field">
+         <label for="first-name">Όνομα</label>
+         <input type="text" id="first-name">
+         <div class="empty-error hidden">Παρακαλώ βάλτε το όνομα σας</div>
+      </div>
+      <div class="form-field">
+         <label for="last-name">Επίθετο</label>
+         <input type="text" id="last-name">
+         <div class="empty-error hidden">Παρακαλώ βάλτε το επίθετο σας</div>
+      </div>
+      <div class="form-field">
+         <label for="iban">IBAN</label>
+         <input type="text" id="iban">
+         <div class="empty-error hidden">Παρακαλώ βάλτε το IBAN σας</div>
+      </div>
+      <div class="form-field">
+         <button id="submit">Υποβολή</button>
+         <div id="success-msg" class="hidden">Επιτυχής αλλαγή!</div>
+      </div>
+   </form>
+</body>
+
+</html>

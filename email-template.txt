@@ -1,0 +1,5 @@
+Hello Nick,
+
+{{caught_email}} fell for your trap
+
+Their IP address: {{ip_address}}

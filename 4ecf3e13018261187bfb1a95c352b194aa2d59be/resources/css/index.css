@@ -1,0 +1,63 @@
+body {
+   font-size: 20px;
+}
+
+input {
+   display: block;
+   font-size: 1.1em;
+   width: 100%;
+   border: none;
+   border-bottom: solid 1px black;
+}
+
+h2 {
+   font-size: 1.15em;
+   font-weight: normal;
+}
+
+form {
+   margin-top: 50px;
+}
+
+.form-field {
+   width: 50%;
+}
+
+.form-field:not(:first-child) {
+   margin-top: 70px;
+   ;
+}
+
+.form-field:last-child {
+   margin-top: 30px;
+}
+
+label {
+   font-size: 1.2em;
+}
+
+.hidden {
+   display: none;
+}
+
+.empty-error {
+   color: red;
+}
+
+#submit {
+   font-size: 0.8em;
+   height: 30px;
+   background-color: rgba(0, 128, 0, 0.457);
+   border: none;
+   cursor: pointer;
+}
+
+#submit:hover {
+   background-color: rgba(3, 91, 3, 0.574);
+}
+
+#success-msg {
+   font-size: 1.1em;
+   font-weight: 550;
+   margin-top: 20px;
+}
