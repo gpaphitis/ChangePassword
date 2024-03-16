@@ -5,17 +5,18 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Not Allowed</title>
-   <link rel="icon" href="resources/favicon.ico">
+   <link rel="icon" href="../resources/images/favicon.ico">
    <link rel="stylesheet" type='text/css' media='screen' href='resources/css/general.css'>
    <link rel="stylesheet" type='text/css' media='screen' href='resources/css/not-allowed.css'>
-   <script src="resources/js/footer-handler.js"></script>
+   <script src="../resources/js/footer-handler.js"></script>
+   <script src="resources/js/not-allowed.js"></script>
 </head>
 
 <body>
    <div id="content">
       <nav>
          <div class="banner-container">
-            <img src="resources/bannerlogo.png" alt="Banner">
+            <img src="../resources/images/bannerlogo.png" alt="Banner">
          </div>
       </nav>
       <div class="header">Get back into your account</div>
@@ -28,16 +29,10 @@
    </div>
    <footer>
       <div class="footer-container">
-         <img src="resources/microsoft-logo.png" alt="Microsoft's logo" id="microsoft-logo">
+         <img src="../resources/images/microsoft-logo.png" alt="Microsoft's logo" id="microsoft-logo">
          <div class="footer-copyright">©2021 Microsoft Corporation</div>
       </div>
    </footer>
-   <script>
-      document.addEventListener("DOMContentLoaded", () => {
-         window.addEventListener("resize", $footerHandler.placeFooterEnd);
-      });
-      $footerHandler.placeFooterEnd();
-   </script>
 </body>
 
 </html>

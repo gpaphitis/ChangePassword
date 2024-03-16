@@ -6,7 +6,7 @@ html {
 }
 
 body {
-   background:url(../signin-background.jpg);
+   background:url(../../../resources/images/signin-background.jpg);
    background-repeat: no-repeat;
    background-size:cover;
    background-position: relative;

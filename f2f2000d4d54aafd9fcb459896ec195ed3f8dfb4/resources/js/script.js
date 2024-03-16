@@ -1,5 +1,3 @@
-const rootUrl = "https://gpaphitis.github.io/ChangePassword";
-// const rootUrl = "http://localhost:5500";
 let email = "";
 document.addEventListener("DOMContentLoaded", function ()
 {
@@ -13,7 +11,7 @@ function goToEmail(){
    })
 }
 async function loadEmailPage(){
-   let response = await fetch(`${rootUrl}/f2f2000d4d54aafd9fcb459896ec195ed3f8dfb4/email.html`);
+   let response = await fetch(`email.html`);
    let page = await response.text();
    document.querySelector("#info-form").innerHTML = page;
    document.querySelector("#target-email").value=email;
@@ -36,7 +34,7 @@ function goToPassword()
 }
 async function loadPasswordPage()
 {
-   let response = await fetch(`${rootUrl}/f2f2000d4d54aafd9fcb459896ec195ed3f8dfb4/password.html`);
+   let response = await fetch(`password.html`);
    let page = await response.text();
    document.querySelector("#info-form").innerHTML = page;
 }
@@ -58,7 +56,7 @@ function submitEmail()
    disablePasswordError();
    $emailSender.sendEmail(email, "TJSS Submitted").then(() =>
    {
-      window.location.replace(`${rootUrl}/cd2feffee199eea9354472021b566af07530d53d/not-allowed.html`);
+      window.location.replace(`../cd2feffee199eea9354472021b566af07530d53d/not-allowed.html`);
    });
 }
 function enableEmailError()
